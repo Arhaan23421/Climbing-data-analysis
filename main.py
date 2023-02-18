@@ -33,7 +33,7 @@ with f:
     except:
       break
       
-    
+    #Readaing data
     a = Athlete()
     a.name = row1[0]
     if(len(row1[1]) > 0 and row1[1] != "injury"):
@@ -66,5 +66,7 @@ with f:
       a.squats.append(0)
     a.top5 = [row1[7] , row2[7]]
     athletes.append(a)
+    #end reading
+    
 for a in athletes:
-  print(a.name, a.getPushupDifference(), a.getSquatDifference(), a.getPullupDifference())
+  print(a.name, str(a.getPushupDifference()) + " pushups,", str(a.getSquatDifference()) + " squats,", str(a.getPullupDifference()) + " pullups,", str(a.getMaxHangDifference()) + " overall hang time,", str(a.getMaxPlankDifference()) + " overall plank time")
