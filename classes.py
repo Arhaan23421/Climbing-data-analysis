@@ -6,7 +6,7 @@ class Athlete:
   maxplank = []
   squats = []
   top5 = []
-
+#vff
   def getPushupDifference(self):
     return self.pushups[1]-self.pushups[0]
     pass
